@@ -1200,6 +1200,13 @@ body {
   cursor: pointer;
   font-size: 0.9rem;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* space between icon and text */
+}
+
+.comments-section .reply-btn i {
+  font-size: 0.9rem;
 }
 
 .comments-section .reply-btn:hover {
@@ -1207,6 +1214,7 @@ body {
   color: #fff;
   border-color: rgb(191, 158, 98);
 }
+
 
 /* .comments-section hr {
   border: none;
