@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soldier</title>
+  <link rel="stylesheet" href="blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <section class="top_nav"> 
+    <div class="info">
+      <p>
+        <a href="mailto:info@gmail.com">
+          <i class="fa-regular fa-envelope change_color"></i>
+          info@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:555-888-2222">
+          <i class="fa-solid fa-phone-volume change_color"></i>
+          555-888-2222
+        </a>
+      </p>
+    </div>
+    <div class="start">
+      <p><a href="#" id="loginLink">Login</a></p>
+      <p><a href="#" id="registerLink">Register</a></p>
+    </div>
+  </section>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="Images/logo.png" alt="Logo">
+    </a>
+  </div>
+
+
+    <!-- Hamburger (checkbox hack) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Desktop nav links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="dropdown">
+        <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="gallery.html">Gallery</a>
+          <a href="team.html">Team</a>
+          <a href="service.html">Service</a>
+          <a href="faq.html">Faq</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Blog <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="blog.html">Blog</a>
+          <a href="blogDetails.html">Blog Details</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+
+      <div class="nav-right-mobile">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <button class="donate-btn">Donate Now</button>
+      </div>
+    </div>
+
+    <!-- Desktop right side -->
+    <div class="nav-right">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <button class="donate-btn">Donate Now</button>
+    </div>
+
+    <!-- Sidebar for mobile -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="Images/logo.png" alt="Logo">
+    <label for="menu-toggle" class="close-btn">&times;</label>
+  </div>
+
+  <!-- Nav links -->
+  <div class="sidebar-links">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+
+  <!-- Pages dropdown -->
+  <div class="sidebar-dropdown">
+    <input type="checkbox" id="pages-toggle">
+    <label for="pages-toggle">
+      Pages <i class="fa-solid fa-caret-down"></i>
+    </label>
+    <div class="sidebar-submenu">
+      <a href="gallery.html">Gallery</a>
+      <a href="team.html">Team</a>
+      <a href="service.html">Service</a>
+      <a href="faq.html">Faq</a>
+    </div>
+  </div>
+
+  <!-- Blog dropdown -->
+  <div class="sidebar-dropdown">
+    <input type="checkbox" id="blog-toggle">
+    <label for="blog-toggle">
+      Blog <i class="fa-solid fa-caret-down"></i>
+    </label>
+    <div class="sidebar-submenu">
+      <a href="blog.html">Blog</a>
+      <a href="blogDetails.html">Blog Details</a>
+    </div>
+  </div>
+
+  <a href="contact.html">Contact</a>
+</div>
+
+
+  <!-- Top nav info (email/phone + login/register) -->
+  <div class="sidebar-info">
+    <h4>Your Address</h4>
+    <p><i class="fa-solid fa-phone"></i> +654 8954 2345</p>
+    <p><i class="fa-regular fa-envelope"></i> info@example.com</p>
+    <p><i class="fa-solid fa-location-dot"></i> United States, Florida</p>
+  </div>
+
+  <div class="sidebar-auth">
+  <p><a href="#" id="loginLinkMobile">Login</a></p>
+  <p><a href="#" id="registerLinkMobile">Register</a></p>
+</div>
+
+
+  <!-- Social icons -->
+  <div class="sidebar-social">
+    <h4>Follow Me</h4>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+  </nav>
+
+  <section class="about_header">
+    <h2>OUR NEWS</h2>
+    <p><a href="index.html">Home</a> > Blog</p>
+  </section>
+
+  <section>
+<!-- Login Modal (hidden by default) -->
+<div id="loginModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Sign In">
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+
+    <h2 class="modal-title">SIGN IN</h2>
+
+    <form class="login-form" action="#" method="post" autocomplete="off">
+      <!-- Username -->
+      <div class="field-group">
+        <label class="input-label" for="username">User Name</label>
+        <input type="text" id="username" name="username" placeholder="Name" required>
+      </div>
+
+      <!-- Password -->
+      <div class="field-group">
+        <label class="input-label" for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+
+      <!-- Actions -->
+      <button type="submit" class="btn btn-primary">Sign in</button>
+
+      <div class="form-row">
+        <label class="remember">
+          <input type="checkbox" name="remember"> Save Password
+        </label>
+        <a href="#" class="link-forgot">Forgot Password?</a>
+      </div>
+       <hr>
+      <div class="form-footer">
+        Haven't Any Account? <a href="#registerModal" class="link-create">Click here</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Register Modal (hidden by default) -->
+<div id="registerModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Register">
+    <div class="modal-card">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+
+        <h2 class="modal-title">SIGN UP</h2>
+
+        <form class="register-form" action="#" method="post" autocomplete="off">
+            <div class="field-group">
+                <label class="input-label" for="regFullName">Full Name</label>
+                <input type="text" id="regFullName" name="regFullName" placeholder="Full Name" required>
+            </div>
+            <div class="field-group">
+                <label class="input-label" for="regEmail">Email</label>
+                <input type="email" id="regEmail" name="regEmail" placeholder="Email" required>
+            </div>
+            <div class="field-group">
+                <label class="input-label" for="regUsername">Username</label>
+                <input type="text" id="regUsername" name="regUsername" placeholder="Username" required>
+            </div>
+            <div class="field-group">
+                <label class="input-label" for="regPassword">Password</label>
+                <input type="password" id="regPassword" name="regPassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <div class="form-footer">
+        Already Have An Account? <a href="#loginModal" class="link-create">Click here</a>
+      </div>
+        </form>
+    </div>
+</div>
+
+</section>
+
+
+<section class="blog">
+    <!-- <div class="activity_header">
+    <p class="activity_title ">News And Event</p>
+    <div class="line"></div>
+
+    <h2>OUR RECENT NEWS</h2>
+    <p class="activity_text">
+      Maecenas sed pellentesque velit, vel tempus ligula. Vivamus ultricies pulvi narmollis.
+      Some services you can learn school uses contemp.
+    </p>
+  </div> -->
+
+  <div class="blog_news">
+    <figure>
+        <div>
+            <img src="Images/1 (1).jpg" alt="Soldiers Charity Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Charity</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Civilians with soldiers after natural
+            disaster in the camp</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+            Praesent euismod libero lacus, eget blandit turpis bivamus ultricies pulvi.</p>
+        </figcaption>
+    </figure>
+
+    <figure>
+        <div>
+            <img src="Images/2 (1).jpg" alt="Soldiers using laptop Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Army</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Soldiers are using laptops for 
+            survellaince during military operation</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+            Praesent euismod libero lacus, eget blandit turpis bivamus ultricies pulvi.</p>
+        </figcaption>
+    </figure>
+
+    <figure>
+        <div>
+            <img src="Images/3 (1).jpg" alt="Soldiers Salute Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Salute</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Silhouette design of soldiers standing
+            and do salute</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+            Praesent euismod libero lacus, eget blandit turpis bivamus ultricies pulvi.</p>
+        </figcaption>
+    </figure>
+
+    <figure>
+        <div>
+            <img src="Images/renaldo-kodra-8liFDsO8Q5c-unsplash.jpg" alt="Soldiers Charity Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Enlightment</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Soldiers are telling the people 
+                history of there adventures in the war-font</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+            Praesent euismod libero lacus. Eget blandit turpis bivamus ultricies pulvi.</p>
+
+        </figcaption>
+    </figure>
+
+    <figure>
+        <div>
+            <img src="Images/bermix-studio-_VlZrLzaa6Y-unsplash.jpg" alt="Soldiers With his daughter Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Family</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Spending time with family</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+            Praesent euismod. Eget blandit turpis bivamus ultricies pulvi. </p>
+
+        </figcaption>
+    </figure>
+
+    <figure>
+        <div>
+            <img src="Images/husniati-salma-OOij4kSwOKs-unsplash.jpg" alt="Soldiers Salute Image">
+        </div>
+        <figcaption>
+            <div class="time">
+                <p>Jan 25,2025</p>
+                <p>Education</p>
+            </div>
+            <div class="blog_line"></div>
+            <p class="blog_title"><a href="#">Military educating children</a></p>
+
+            <p class="sub">Quisque vel eros vel velit mollis lobortis. Puisque in massa justo. 
+                 Eget blandit turpis bivamus ultricies pulvi  vel eros vel velit mollis lobortis.
+            </p>
+
+        </figcaption>
+    </figure>
+  </div>
+  </div>
+</section>
+
+ <!-- Footer-->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <!-- Left: Subscribe -->
+      <section class="subscribe" aria-label="Subscribe section">
+        <h3>SUBSCRIBE NOW</h3>
+        <p>Tempus ligula vivamus ultricies pulvinar risus. Some services you can learn school uses contemn non est quis. Puisque in massa</p>
+        <div class="fields" role="form">
+          <!-- <span style="font-size:14px; color:#9b8a4a;">Your Email</span> -->
+          <input type="email" placeholder="Your Email" aria-label="Email address" />
+          <!-- decorative pencil icon (could be an inline SVG) -->
+          <span aria-hidden="true" style="font-size:16px; color:#b0893f;">✎</span>
+        </div>
+        <div class="hint">We respect your privacy. Unsubscribe anytime.</div>
+      </section>
+
+      <!-- Center: Card/logo -->
+      <div class="center-card" aria-label="Center logo card">
+        <div class="cad">
+          <div class="logo">
+            <a href="index.html">
+      <img src="Images/logo.png" alt="Logo">
+    </a></div>
+          <p>Consequat phar etra in the auris odio spendisse non est quis Puisque in massa justo raesent.</p>
+          <div class="my-social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Blog & Events -->
+      <section class="events" aria-label="Blog and events">
+        <div style="font-weight:700; font-size:20px;  color:#fff; text-align: center;">
+          BLOG & EVENTS
+        </div>
+
+        <article class="event-item" aria-label="Event item 1">
+          <div class="event-item-header event-meta">
+            <span><i class="fa-regular fa-clock"></i>Jan 25,2025</span>
+            <span><i class="fa-solid fa-user"></i>Admin</span>
+            <span><i class="fa-regular fa-message"></i>1.7k</span>
+          </div>
+          <div class="event-title"><a href="blog.html">Soldier for rideshare in the way</a></div>
+        </article>
+
+        <article class="event-item" aria-label="Event item 2">
+          <div class="event-meta">
+            <span><i class="fa-regular fa-clock"></i>April 25,2025</span>
+            <span><i class="fa-solid fa-user"></i>Admin</span>
+            <span><i class="fa-regular fa-message"></i>1.7k</span>
+          </div>
+          <div class="event-title" style="min-height:1.6em;"><a href="blog.html">Young boy smiles as he holds flags</a></div>
+        </article>
+      </section>
+    </div>
+
+    
+  </footer>
+  <div class="footer-bottom" aria-label="Copyright">
+      ©Copyright - All Right Reserved. Designed with ❤️ by
+      <span style="color:#f2d08a; margin-left:6px;">Valentine</span>
+    </div>
+
+
+
+
+<!-- Back to Top Button -->
+<button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+
+<script src="blog.js"></script>
+
+</body>
+</html>
