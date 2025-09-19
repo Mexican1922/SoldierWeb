@@ -1,533 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soldier</title>
-  <link rel="stylesheet" href="blogDetails.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soldier</title>
+    <link rel="stylesheet" href="blogDetails.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./Images/military-soldier-logo-design-template-260nw-1582855240.webp"
+      type="image/x-icon"
+    />
 
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-</head>
-<body>
-  <!-- Top Bar -->
-  <section class="top_nav"> 
-    <div class="info">
-      <p>
-        <a href="mailto:info@gmail.com">
-          <i class="fa-regular fa-envelope change_color"></i>
-          info@gmail.com
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <section class="top_nav">
+      <div class="info">
+        <p>
+          <a href="mailto:info@gmail.com">
+            <i class="fa-regular fa-envelope change_color"></i>
+            info@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="tel:555-888-2222">
+            <i class="fa-solid fa-phone-volume change_color"></i>
+            555-888-2222
+          </a>
+        </p>
+      </div>
+      <div class="start">
+        <p><a href="#" id="loginLink">Login</a></p>
+        <p><a href="#" id="registerLink">Register</a></p>
+      </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.png" alt="Logo" />
         </a>
-      </p>
-      <p>
-        <a href="tel:555-888-2222">
-          <i class="fa-solid fa-phone-volume change_color"></i>
-          555-888-2222
-        </a>
-      </p>
-    </div>
-    <div class="start">
-      <p><a href="#" id="loginLink">Login</a></p>
-      <p><a href="#" id="registerLink">Register</a></p>
-    </div>
-  </section>
+      </div>
 
-  <!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">
-    <a href="index.html">
-      <img src="Images/logo.png" alt="Logo">
-    </a>
-  </div>
+      <!-- Hamburger (checkbox hack) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
+      <!-- Desktop nav links -->
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="gallery.html">Gallery</a>
+            <a href="team.html">Team</a>
+            <a href="service.html">Service</a>
+            <a href="faq.html">Faq</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Blog <i class="fa-solid fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="blog.html">Blog</a>
+            <a href="blogDetails.html">Blog Details</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
 
-    <!-- Hamburger (checkbox hack) -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <!-- Desktop nav links -->
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <div class="dropdown">
-        <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="gallery.html">Gallery</a>
-          <a href="team.html">Team</a>
-          <a href="service.html">Service</a>
-          <a href="faq.html">Faq</a>
+        <div class="nav-right-mobile">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <button class="donate-btn">Donate Now</button>
         </div>
       </div>
-      <div class="dropdown">
-        <a href="#">Blog <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="blog.html">Blog</a>
-          <a href="blogDetails.html">Blog Details</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
 
-      <div class="nav-right-mobile">
+      <!-- Desktop right side -->
+      <div class="nav-right">
         <i class="fa-solid fa-magnifying-glass"></i>
         <button class="donate-btn">Donate Now</button>
       </div>
-    </div>
 
-    <!-- Desktop right side -->
-    <div class="nav-right">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <button class="donate-btn">Donate Now</button>
-    </div>
+      <!-- Sidebar for mobile -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <img src="Images/logo.png" alt="Logo" />
+          <label for="menu-toggle" class="close-btn">&times;</label>
+        </div>
 
-    <!-- Sidebar for mobile -->
-<div class="sidebar">
-  <div class="sidebar-header">
-    <img src="Images/logo.png" alt="Logo">
-    <label for="menu-toggle" class="close-btn">&times;</label>
-  </div>
+        <!-- Nav links -->
+        <div class="sidebar-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
 
-  <!-- Nav links -->
-  <div class="sidebar-links">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-
-  <!-- Pages dropdown -->
-  <div class="sidebar-dropdown">
-    <input type="checkbox" id="pages-toggle">
-    <label for="pages-toggle">
-      Pages <i class="fa-solid fa-caret-down"></i>
-    </label>
-    <div class="sidebar-submenu">
-      <a href="gallery.html">Gallery</a>
-      <a href="team.html">Team</a>
-      <a href="service.html">Service</a>
-      <a href="faq.html">Faq</a>
-    </div>
-  </div>
-
-  <!-- Blog dropdown -->
-  <div class="sidebar-dropdown">
-    <input type="checkbox" id="blog-toggle">
-    <label for="blog-toggle">
-      Blog <i class="fa-solid fa-caret-down"></i>
-    </label>
-    <div class="sidebar-submenu">
-      <a href="blog.html">Blog</a>
-      <a href="blogDetails.html">Blog Details</a>
-    </div>
-  </div>
-
-  <a href="contact.html">Contact</a>
-</div>
-
-
-  <!-- Top nav info (email/phone + login/register) -->
-  <div class="sidebar-info">
-    <h4>Your Address</h4>
-    <p><i class="fa-solid fa-phone"></i> +654 8954 2345</p>
-    <p><i class="fa-regular fa-envelope"></i> info@example.com</p>
-    <p><i class="fa-solid fa-location-dot"></i> United States, Florida</p>
-  </div>
-
-  <div class="sidebar-auth">
-  <p><a href="#" id="loginLinkMobile">Login</a></p>
-  <p><a href="#" id="registerLinkMobile">Register</a></p>
-</div>
-
-
-  <!-- Social icons -->
-  <div class="sidebar-social">
-    <h4>Follow Me</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </div>
-</div>
-
-  </nav>
-
-  <section class="about_header">
-    <h2>BLOG DETAILS</h2>
-    <p><a href="index.html">Home</a> > Blog Details</p>
-  </section>
-
-  <section>
-<!-- Login Modal (hidden by default) -->
-<div id="loginModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Sign In">
-  <div class="modal-card">
-    <button class="modal-close" aria-label="Close modal">&times;</button>
-
-    <h2 class="modal-title">SIGN IN</h2>
-
-    <form class="login-form" action="#" method="post" autocomplete="off">
-      <!-- Username -->
-      <div class="field-group">
-        <label class="input-label" for="username">User Name</label>
-        <input type="text" id="username" name="username" placeholder="Name" required>
-      </div>
-
-      <!-- Password -->
-      <div class="field-group">
-        <label class="input-label" for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-      </div>
-
-      <!-- Actions -->
-      <button type="submit" class="btn btn-primary">Sign in</button>
-
-      <div class="form-row">
-        <label class="remember">
-          <input type="checkbox" name="remember"> Save Password
-        </label>
-        <a href="#" class="link-forgot">Forgot Password?</a>
-      </div>
-       <hr>
-      <div class="form-footer">
-        Haven't Any Account? <a href="#registerModal" class="link-create">Click here</a>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Register Modal (hidden by default) -->
-<div id="registerModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Register">
-    <div class="modal-card">
-        <button class="modal-close" aria-label="Close modal">&times;</button>
-
-        <h2 class="modal-title">SIGN UP</h2>
-
-        <form class="register-form" action="#" method="post" autocomplete="off">
-            <div class="field-group">
-                <label class="input-label" for="regFullName">Full Name</label>
-                <input type="text" id="regFullName" name="regFullName" placeholder="Full Name" required>
+          <!-- Pages dropdown -->
+          <div class="sidebar-dropdown">
+            <input type="checkbox" id="pages-toggle" />
+            <label for="pages-toggle">
+              Pages <i class="fa-solid fa-caret-down"></i>
+            </label>
+            <div class="sidebar-submenu">
+              <a href="gallery.html">Gallery</a>
+              <a href="team.html">Team</a>
+              <a href="service.html">Service</a>
+              <a href="faq.html">Faq</a>
             </div>
-            <div class="field-group">
-                <label class="input-label" for="regEmail">Email</label>
-                <input type="email" id="regEmail" name="regEmail" placeholder="Email" required>
+          </div>
+
+          <!-- Blog dropdown -->
+          <div class="sidebar-dropdown">
+            <input type="checkbox" id="blog-toggle" />
+            <label for="blog-toggle">
+              Blog <i class="fa-solid fa-caret-down"></i>
+            </label>
+            <div class="sidebar-submenu">
+              <a href="blog.html">Blog</a>
+              <a href="blogDetails.html">Blog Details</a>
             </div>
-            <div class="field-group">
-                <label class="input-label" for="regUsername">Username</label>
-                <input type="text" id="regUsername" name="regUsername" placeholder="Username" required>
-            </div>
-            <div class="field-group">
-                <label class="input-label" for="regPassword">Password</label>
-                <input type="password" id="regPassword" name="regPassword" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
-            <div class="form-footer">
-        Already Have An Account? <a href="#loginModal" class="link-create">Click here</a>
-      </div>
-        </form>
-    </div>
-</div>
+          </div>
 
-</section>
-
-
-<section class="container">
-  <!-- MAIN POST -->
-  <section class="post">
-    <img class="post-media" src="Images/bg-1.jpg" alt="Hero soldier image">
-
-    <div class="post-meta">
-      <span><i class="fa-solid fa-user"></i> Admin</span>
-      <span><i class="fa-regular fa-comment"></i> 5 Comments</span>
-      <span><i class="fa-regular fa-calendar"></i> April 15, 25</span>
-      <span><i class="fa-solid fa-hand-holding-heart"></i> Charity</span>
-    </div>
-
-    <h2>Double exposure silhouette of soldier on the united states flag in sunset</h2>
-    <p>Quisque porta auctor eros. Aenean pellentesque ultricies mauris non posuere.
-         Vivamus sed metus justo. In a lacus placerat, dictum odio hendrerit, 
-         fermentum enim. Quisque elit metus, accumsan a venenatis vel, vulputate id ligula.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... Lorem ipsum dolor sit, amet consectetur adi
-        pisicing elit. Quis obcaecati numquam consequatur repellendus eaque possimus, sint temporibus quas, ex, 
-        inventore earum odit maxime velit minima. At obcaecati doloremque vitae ipsam? Repellat ratione tempore deserunt aliquid totam nam
-         veniam vero illo incidunt corrupti dicta error autem, sunt sapiente! voluptates alias atque asperiores excepturi tempora. Quia?
-    Ex veniam ratione ipsam vitae cumque in cum ullam dolor sit aliquam. 
-    Corrupti magni sunt dolorum minima dolor accusamus aut ex repellat explicabo perspiciatis.</p>
-
-    <div class="blockquote">
-      <h4>Your Soldier</h4>
-    <p>Your soldier is a symbol of courage, dedication, and unwavering service to the nation. 
-        Their sacrifices inspire us to support and honor all who serve.</p>
-    </div>
-
-    <ul class="checklist">
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Training program includes ...</li>
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Army discipline benefits ...</li>
-      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Veterans share experience ...</li>
-    </ul>
-
-    <p>
-    Deserunt cupiditate reiciendis vel, culpa distinctio explicabo perspiciatis aspernatur corrupti est, doloremque suscipit facilis voluptatem asperiores, eaque expedita numquam earum nesciunt repudiandae tenetur aliquid itaque officia! Maiores nihil sapiente adipisci.
-    Illum, aspernatur sed aliquam, quidem officia commodi aut consequuntur eaque, delectus et modi harum perferendis? Cum, asperiores porro dolore a, neque voluptatem alias, dolores molestiae consequatur cumque magni molestias illum?
-    Adipisci facilis sint autem quos magnam illo a sapiente quidem obcaecati voluptatem, quia praesentium non aliquam iusto beatae eveniet ratione, cupiditate optio debitis voluptates alias atque asperiores excepturi tempora. Quia?
-    Ex veniam ratione ipsam vitae cumque in cum ullam dolor sit aliquam. Corrupti magni sunt dolorum minima dolor accusamus aut ex repellat explicabo perspiciatis. Placeat sunt voluptatem exercitationem obcaecati earum.</p>
-
-    <div class="gallery-row">
-      <img src="Images/benjamin-elliott-lSI8Mr4sSco-unsplash.jpg" alt="">
-      <img src="Images/gallery-4.jpg" alt="">
-      <img src="Images/gallery-3.jpg" alt="">
-    </div>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestias, maiores nemo cumque, repellat ratione tempore deserunt aliquid totam nam
-         veniam vero illo incidunt corrupti dicta error autem, sunt sapiente! voluptates alias atque asperiores excepturi tempora. Quia?
-    Ex veniam ratione ipsam vitae cumque in cum ullam dolor sit aliquam. 
-    Corrupti magni sunt dolorum minima dolor accusamus aut ex repellat explicabo perspiciatis.
-     Placeat sunt voluptatem exercitationem obcaecati earum. aspernatur sed aliquam, quidem officia commodi aut consequuntur eaque, delectus et modi harum perferendis? Cum, asperiores porro dolore a,
-      neque voluptatem alias, dolores molestiae consequatur.</p>
-
-    <div class="author-card">
-      <img src="Images/author.jpg" alt="Author photo">
-      <div>
-        <h4>Your Soldier</h4>
-        <p>Passionate about sharing stories of courage and service. 
-            Dedicated to supporting veterans and their families through impactful writing.</p>
-
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-        <a href="#"><i class="fa-brands fa-figma"></i></a>
-      </div>
-    </div>
-
-    
-  </section>
-  
-
-  <!-- SIDEBAR -->
-  <aside class="rightbar">
-    <!-- Instagram -->
-    <div class="rightbar-card">
-      <h3>Instagram</h3>
-      <div class="rightbar-line"></div>
-      <div class="instagram-grid">
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/gallery-1.jpg" alt="A kid with a soldier">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/thomas-tucker-Gh8WA4OXBM8-unsplash.jpg" alt="Soldier delivering aid">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/jakob-owens-M0M-FR2iedk-unsplash.jpg" alt="Baby Soldier in the field">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/bermix-studio-_VlZrLzaa6Y-unsplash.jpg" alt="Soldier hugging child">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/renaldo-kodra-8liFDsO8Q5c-unsplash.jpg" alt="Soldier with gun">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-  <a href="404.html" class="insta-item">
-    <img src="Images/gallery-6.jpg" alt="Soldier smiling">
-    <div class="overlay"><i class="fa-solid fa-magnifying-glass"></i></div>
-  </a>
-
-</div>
-
-
-    </div>
-
-    <!-- Search -->
-    <div class="rightbar-card">
-      <h3>Search</h3>
-      <div class="rightbar-line"></div>
-
-      <!-- Search Form -->
-      <form class="search-box" id="searchForm">
-        <input type="text" placeholder="Search...">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </div>
-
-
-    <!-- Recent news -->
-    <div class="rightbar-card recent-news">
-      <h3>Recent News</h3>
-      <div class="rightbar-line"></div>
-      <article>
-        <img src="Images/clay-banks-kk3UKBAydXc-unsplash.jpg" alt="Soldiers reuniting">
-        <div>
-        <h4><a href="#">Soldiers reuniting after deployment...</a></h4>
-        <p class="meta-text"><i class="fa-regular fa-clock" aria-hidden="true"></i> January 5, 2024</p>
+          <a href="contact.html">Contact</a>
         </div>
 
-      </article>
-      <article>
-        <img src="Images/mhrezaa-T_kagYWg1pU-unsplash.jpg" alt="Civilians receiving aid from soldiers">
-        <div>
-        <h4><a href="#">Civilians with soldiers in disaster aid...</a></h4>
-        <p class="meta-text"><i class="fa-regular fa-clock" aria-hidden="true"></i> May 24, 2025</p>
+        <!-- Top nav info (email/phone + login/register) -->
+        <div class="sidebar-info">
+          <h4>Your Address</h4>
+          <p><i class="fa-solid fa-phone"></i> +654 8954 2345</p>
+          <p><i class="fa-regular fa-envelope"></i> info@example.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> United States, Florida</p>
         </div>
 
-      </article>
-      <article>
-        <img src="Images/lumin-osity-vYK085_E3W4-unsplash.jpg" alt="Civilians receiving aid from soldiers">
-        <div>
-        <h4><a href="#">Military red cross efforts...</a></h4>
-        <p class="meta-text"><i class="fa-regular fa-clock" aria-hidden="true"></i> June 15, 2025</p>
+        <div class="sidebar-auth">
+          <p><a href="#" id="loginLinkMobile">Login</a></p>
+          <p><a href="#" id="registerLinkMobile">Register</a></p>
         </div>
 
-      </article>
-      <!-- <article>
-        <img src="Images/mhrezaa-T_kagYWg1pU-unsplash.jpg" alt="Civilians receiving aid from soldiers">
-        <h4><a href="#">Civilians with soldiers in disaster aid...</a></h4>
-      </article> -->
-    </div>
-
-    <!-- Categories -->
-    <div class="rightbar-card categories">
-      <h3>Categories</h3>
-      <div class="rightbar-line"></div>
-      <ul>
-        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Natural Guard</a></li>
-        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Education Care</a></li>
-        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Soldier Nursing</a></li>
-        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Standing and salute</a></li>
-      </ul>
-    </div>
-
-
-    <!-- Tags -->
-    <div class="rightbar-card tags">
-      <h3>Tags</h3>
-      <div class="rightbar-line"></div>
-      <button>Support</button>
-      <button>Children</button>
-      <button>Initiative</button>
-      <button>ChildCare</button>
-      <button>Education</button>
-    </div>
-  </aside>
-</section>
-
-<section class="container-ft">
-        <div class="post-footer">
-            <h4>Tag: <button>Care</button> <button>ChildCare</button></h4>
-            <h4>Share: <button><a href="#"><i class="fa-brands fa-facebook-f"></i></a></button> 
-            <button><a href="#"><i class="fa-brands fa-x-twitter"></i></a></button> 
-            <button><a href="#"><i class="fa-brands fa-instagram"></i></a></button>
-             <button><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></button></h4>
-        </div>
-         <hr>
-
-         <div class="post-navigation">
-            <button>Previous Post</button>
-            <button>Next Post</button>
-         </div>
-
-         <hr>
-</section>
-<section class="comments-section">
-  <h3>3 Comments</h3>
-
-  <!-- Comment 1 -->
-  <div class="comment">
-    <img src="Images/1.jpg" alt="User">
-    <div class="comment-body">
-      <div class="comment-header">
-        <h4>Hafizur Rahman</h4>
-        <span>27 Jan,25</span>
-      </div>
-      <p>Nam consectetur lectus sed nibh pulvinar varius.</p>
-    </div>
-    <button class="reply-btn">
-      <i class="fas fa-reply"></i> Reply
-    </button>
-  </div>
-  <hr>
-
-  <!-- Comment 2 -->
-  <div class="comment">
-    <img src="Images/2.jpg" alt="User">
-    <div class="comment-body">
-      <div class="comment-header">
-        <h4>Moyna Khatun</h4>
-        <span>27 Jan,25</span>
-      </div>
-      <p>Best review in this content</p>
-    </div>
-    <button class="reply-btn">
-      <i class="fas fa-reply"></i> Reply
-    </button>
-  </div>
-  <hr>
-
-  <!-- Comment 3 -->
-  <div class="comment">
-    <img src="Images/3.jpg" alt="User">
-    <div class="comment-body">
-      <div class="comment-header">
-        <h4>Hasem Uddin</h4>
-        <span>27 Jan,25</span>
-      </div>
-      <p>Cras nec fermentum non rutrum lectus sollicitudin</p>
-    </div>
-    <button class="reply-btn">
-      <i class="fas fa-reply"></i> Reply
-    </button>
-  </div>
-
-  <!-- Comment Form -->
-  <div class="comment-form">
-    <h3>Add Your Comment</h3>
-    <p>Your email address will not be published. Required fields are marked *</p>
-
-    <form>
-      <div class="formy-row">
-        <input type="text" placeholder="Soldier*">
-        <input type="email" placeholder="soldier@info.com*">
-        <input type="number" placeholder="+586 9587 3458*">
-      </div>
-      <textarea placeholder="Write Your Comment*"></textarea>
-      <button type="submit" class="post-btn">Post Comment</button>
-    </form>
-  </div>
-</section>
-<!-- Footer-->
-  <footer class="footer" aria-label="Site footer">
-    <div class="footer-inner">
-      <!-- Left: Subscribe -->
-      <section class="subscribe" aria-label="Subscribe section">
-        <h3>SUBSCRIBE NOW</h3>
-        <p>Tempus ligula vivamus ultricies pulvinar risus. Some services you can learn school uses contemn non est quis. Puisque in massa</p>
-        <div class="fields" role="form">
-          <!-- <span style="font-size:14px; color:#9b8a4a;">Your Email</span> -->
-          <input type="email" placeholder="Your Email" aria-label="Email address" />
-          <!-- decorative pencil icon (could be an inline SVG) -->
-          <span aria-hidden="true" style="font-size:16px; color:#b0893f;">✎</span>
-        </div>
-        <div class="hint">We respect your privacy. Unsubscribe anytime.</div>
-      </section>
-
-      <!-- Center: Card/logo -->
-      <div class="center-card" aria-label="Center logo card">
-        <div class="cad">
-          <div class="logo">
-            <a href="index.html">
-      <img src="Images/logo.png" alt="Logo">
-    </a></div>
-          <p>Consequat phar etra in the auris odio spendisse non est quis Puisque in massa justo raesent.</p>
-          <div class="my-social-icons">
+        <!-- Social icons -->
+        <div class="sidebar-social">
+          <h4>Follow Me</h4>
+          <div class="social-icons">
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -535,49 +159,608 @@
           </div>
         </div>
       </div>
+    </nav>
 
-      <!-- Right: Blog & Events -->
-      <section class="events" aria-label="Blog and events">
-        <div style="font-weight:700; font-size:20px;  color:#fff; text-align: center;">
-          BLOG & EVENTS
+    <section class="about_header">
+      <h2>BLOG DETAILS</h2>
+      <p><a href="index.html">Home</a> > Blog Details</p>
+    </section>
+
+    <section>
+      <!-- Login Modal (hidden by default) -->
+      <div
+        id="loginModal"
+        class="modal-overlay"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Sign In"
+      >
+        <div class="modal-card">
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+
+          <h2 class="modal-title">SIGN IN</h2>
+
+          <form class="login-form" action="#" method="post" autocomplete="off">
+            <!-- Username -->
+            <div class="field-group">
+              <label class="input-label" for="username">User Name</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Name"
+                required
+              />
+            </div>
+
+            <!-- Password -->
+            <div class="field-group">
+              <label class="input-label" for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <!-- Actions -->
+            <button type="submit" class="btn btn-primary">Sign in</button>
+
+            <div class="form-row">
+              <label class="remember">
+                <input type="checkbox" name="remember" /> Save Password
+              </label>
+              <a href="#" class="link-forgot">Forgot Password?</a>
+            </div>
+            <hr />
+            <div class="form-footer">
+              Haven't Any Account?
+              <a href="#registerModal" class="link-create">Click here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Register Modal (hidden by default) -->
+      <div
+        id="registerModal"
+        class="modal-overlay"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Register"
+      >
+        <div class="modal-card">
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+
+          <h2 class="modal-title">SIGN UP</h2>
+
+          <form
+            class="register-form"
+            action="#"
+            method="post"
+            autocomplete="off"
+          >
+            <div class="field-group">
+              <label class="input-label" for="regFullName">Full Name</label>
+              <input
+                type="text"
+                id="regFullName"
+                name="regFullName"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="field-group">
+              <label class="input-label" for="regEmail">Email</label>
+              <input
+                type="email"
+                id="regEmail"
+                name="regEmail"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="field-group">
+              <label class="input-label" for="regUsername">Username</label>
+              <input
+                type="text"
+                id="regUsername"
+                name="regUsername"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="field-group">
+              <label class="input-label" for="regPassword">Password</label>
+              <input
+                type="password"
+                id="regPassword"
+                name="regPassword"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <div class="form-footer">
+              Already Have An Account?
+              <a href="#loginModal" class="link-create">Click here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <!-- MAIN POST -->
+      <section class="post">
+        <img
+          class="post-media"
+          src="Images/bg-1.jpg"
+          alt="Hero soldier image"
+        />
+
+        <div class="post-meta">
+          <span><i class="fa-solid fa-user"></i> Admin</span>
+          <span><i class="fa-regular fa-comment"></i> 5 Comments</span>
+          <span><i class="fa-regular fa-calendar"></i> April 15, 25</span>
+          <span><i class="fa-solid fa-hand-holding-heart"></i> Charity</span>
         </div>
 
-        <article class="event-item" aria-label="Event item 1">
-          <div class="event-item-header event-meta">
-            <span><i class="fa-regular fa-clock"></i>Jan 25,2025</span>
-            <span><i class="fa-solid fa-user"></i>Admin</span>
-            <span><i class="fa-regular fa-message"></i>1.7k</span>
-          </div>
-          <div class="event-title"><a href="blog.html">Soldier for rideshare in the way</a></div>
-        </article>
+        <h2>
+          Double exposure silhouette of soldier on the united states flag in
+          sunset
+        </h2>
+        <p>
+          Quisque porta auctor eros. Aenean pellentesque ultricies mauris non
+          posuere. Vivamus sed metus justo. In a lacus placerat, dictum odio
+          hendrerit, fermentum enim. Quisque elit metus, accumsan a venenatis
+          vel, vulputate id ligula.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit... Lorem ipsum
+          dolor sit, amet consectetur adi pisicing elit. Quis obcaecati numquam
+          consequatur repellendus eaque possimus, sint temporibus quas, ex,
+          inventore earum odit maxime velit minima. At obcaecati doloremque
+          vitae ipsam? Repellat ratione tempore deserunt aliquid totam nam
+          veniam vero illo incidunt corrupti dicta error autem, sunt sapiente!
+          voluptates alias atque asperiores excepturi tempora. Quia? Ex veniam
+          ratione ipsam vitae cumque in cum ullam dolor sit aliquam. Corrupti
+          magni sunt dolorum minima dolor accusamus aut ex repellat explicabo
+          perspiciatis.
+        </p>
 
-        <article class="event-item" aria-label="Event item 2">
-          <div class="event-meta">
-            <span><i class="fa-regular fa-clock"></i>April 25,2025</span>
-            <span><i class="fa-solid fa-user"></i>Admin</span>
-            <span><i class="fa-regular fa-message"></i>1.7k</span>
+        <div class="blockquote">
+          <h4>Your Soldier</h4>
+          <p>
+            Your soldier is a symbol of courage, dedication, and unwavering
+            service to the nation. Their sacrifices inspire us to support and
+            honor all who serve.
+          </p>
+        </div>
+
+        <ul class="checklist">
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Training
+            program includes ...
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Army discipline
+            benefits ...
+          </li>
+          <li>
+            <i class="fa-solid fa-check" aria-hidden="true"></i> Veterans share
+            experience ...
+          </li>
+        </ul>
+
+        <p>
+          Deserunt cupiditate reiciendis vel, culpa distinctio explicabo
+          perspiciatis aspernatur corrupti est, doloremque suscipit facilis
+          voluptatem asperiores, eaque expedita numquam earum nesciunt
+          repudiandae tenetur aliquid itaque officia! Maiores nihil sapiente
+          adipisci. Illum, aspernatur sed aliquam, quidem officia commodi aut
+          consequuntur eaque, delectus et modi harum perferendis? Cum,
+          asperiores porro dolore a, neque voluptatem alias, dolores molestiae
+          consequatur cumque magni molestias illum? Adipisci facilis sint autem
+          quos magnam illo a sapiente quidem obcaecati voluptatem, quia
+          praesentium non aliquam iusto beatae eveniet ratione, cupiditate optio
+          debitis voluptates alias atque asperiores excepturi tempora. Quia? Ex
+          veniam ratione ipsam vitae cumque in cum ullam dolor sit aliquam.
+          Corrupti magni sunt dolorum minima dolor accusamus aut ex repellat
+          explicabo perspiciatis. Placeat sunt voluptatem exercitationem
+          obcaecati earum.
+        </p>
+
+        <div class="gallery-row">
+          <img src="Images/benjamin-elliott-lSI8Mr4sSco-unsplash.jpg" alt="" />
+          <img src="Images/gallery-4.jpg" alt="" />
+          <img src="Images/gallery-3.jpg" alt="" />
+        </div>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          molestias, maiores nemo cumque, repellat ratione tempore deserunt
+          aliquid totam nam veniam vero illo incidunt corrupti dicta error
+          autem, sunt sapiente! voluptates alias atque asperiores excepturi
+          tempora. Quia? Ex veniam ratione ipsam vitae cumque in cum ullam dolor
+          sit aliquam. Corrupti magni sunt dolorum minima dolor accusamus aut ex
+          repellat explicabo perspiciatis. Placeat sunt voluptatem
+          exercitationem obcaecati earum. aspernatur sed aliquam, quidem officia
+          commodi aut consequuntur eaque, delectus et modi harum perferendis?
+          Cum, asperiores porro dolore a, neque voluptatem alias, dolores
+          molestiae consequatur.
+        </p>
+
+        <div class="author-card">
+          <img src="Images/author.jpg" alt="Author photo" />
+          <div>
+            <h4>Your Soldier</h4>
+            <p>
+              Passionate about sharing stories of courage and service. Dedicated
+              to supporting veterans and their families through impactful
+              writing.
+            </p>
+
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-figma"></i></a>
           </div>
-          <div class="event-title" style="min-height:1.6em;"><a href="blog.html">Young boy smiles as he holds flags</a></div>
-        </article>
+        </div>
       </section>
-    </div>
 
-    
-  </footer>
-  <div class="footer-bottom" aria-label="Copyright">
+      <!-- SIDEBAR -->
+      <aside class="rightbar">
+        <!-- Instagram -->
+        <div class="rightbar-card">
+          <h3>Instagram</h3>
+          <div class="rightbar-line"></div>
+          <div class="instagram-grid">
+            <a href="404.html" class="insta-item">
+              <img src="Images/gallery-1.jpg" alt="A kid with a soldier" />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+
+            <a href="404.html" class="insta-item">
+              <img
+                src="Images/thomas-tucker-Gh8WA4OXBM8-unsplash.jpg"
+                alt="Soldier delivering aid"
+              />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+
+            <a href="404.html" class="insta-item">
+              <img
+                src="Images/jakob-owens-M0M-FR2iedk-unsplash.jpg"
+                alt="Baby Soldier in the field"
+              />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+
+            <a href="404.html" class="insta-item">
+              <img
+                src="Images/bermix-studio-_VlZrLzaa6Y-unsplash.jpg"
+                alt="Soldier hugging child"
+              />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+
+            <a href="404.html" class="insta-item">
+              <img
+                src="Images/renaldo-kodra-8liFDsO8Q5c-unsplash.jpg"
+                alt="Soldier with gun"
+              />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+
+            <a href="404.html" class="insta-item">
+              <img src="Images/gallery-6.jpg" alt="Soldier smiling" />
+              <div class="overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Search -->
+        <div class="rightbar-card">
+          <h3>Search</h3>
+          <div class="rightbar-line"></div>
+
+          <!-- Search Form -->
+          <form class="search-box" id="searchForm">
+            <input type="text" placeholder="Search..." />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Recent news -->
+        <div class="rightbar-card recent-news">
+          <h3>Recent News</h3>
+          <div class="rightbar-line"></div>
+          <article>
+            <img
+              src="Images/clay-banks-kk3UKBAydXc-unsplash.jpg"
+              alt="Soldiers reuniting"
+            />
+            <div>
+              <h4><a href="#">Soldiers reuniting after deployment...</a></h4>
+              <p class="meta-text">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> January
+                5, 2024
+              </p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="Images/mhrezaa-T_kagYWg1pU-unsplash.jpg"
+              alt="Civilians receiving aid from soldiers"
+            />
+            <div>
+              <h4>
+                <a href="#">Civilians with soldiers in disaster aid...</a>
+              </h4>
+              <p class="meta-text">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> May 24,
+                2025
+              </p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="Images/lumin-osity-vYK085_E3W4-unsplash.jpg"
+              alt="Civilians receiving aid from soldiers"
+            />
+            <div>
+              <h4><a href="#">Military red cross efforts...</a></h4>
+              <p class="meta-text">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i> June 15,
+                2025
+              </p>
+            </div>
+          </article>
+          <!-- <article>
+        <img src="Images/mhrezaa-T_kagYWg1pU-unsplash.jpg" alt="Civilians receiving aid from soldiers">
+        <h4><a href="#">Civilians with soldiers in disaster aid...</a></h4>
+      </article> -->
+        </div>
+
+        <!-- Categories -->
+        <div class="rightbar-card categories">
+          <h3>Categories</h3>
+          <div class="rightbar-line"></div>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-angle-right"></i> Natural Guard</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-angle-right"></i> Education Care</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-angle-right"></i> Soldier Nursing</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-angle-right"></i> Standing and salute</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tags -->
+        <div class="rightbar-card tags">
+          <h3>Tags</h3>
+          <div class="rightbar-line"></div>
+          <button>Support</button>
+          <button>Children</button>
+          <button>Initiative</button>
+          <button>ChildCare</button>
+          <button>Education</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container-ft">
+      <div class="post-footer">
+        <h4>Tag: <button>Care</button> <button>ChildCare</button></h4>
+        <h4>
+          Share:
+          <button>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </button>
+          <button>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </button>
+          <button>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </button>
+          <button>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </button>
+        </h4>
+      </div>
+      <hr />
+
+      <div class="post-navigation">
+        <button>Previous Post</button>
+        <button>Next Post</button>
+      </div>
+
+      <hr />
+    </section>
+    <section class="comments-section">
+      <h3>3 Comments</h3>
+
+      <!-- Comment 1 -->
+      <div class="comment">
+        <img src="Images/1.jpg" alt="User" />
+        <div class="comment-body">
+          <div class="comment-header">
+            <h4>Hafizur Rahman</h4>
+            <span>27 Jan,25</span>
+          </div>
+          <p>Nam consectetur lectus sed nibh pulvinar varius.</p>
+        </div>
+        <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+      </div>
+      <hr />
+
+      <!-- Comment 2 -->
+      <div class="comment">
+        <img src="Images/2.jpg" alt="User" />
+        <div class="comment-body">
+          <div class="comment-header">
+            <h4>Moyna Khatun</h4>
+            <span>27 Jan,25</span>
+          </div>
+          <p>Best review in this content</p>
+        </div>
+        <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+      </div>
+      <hr />
+
+      <!-- Comment 3 -->
+      <div class="comment">
+        <img src="Images/3.jpg" alt="User" />
+        <div class="comment-body">
+          <div class="comment-header">
+            <h4>Hasem Uddin</h4>
+            <span>27 Jan,25</span>
+          </div>
+          <p>Cras nec fermentum non rutrum lectus sollicitudin</p>
+        </div>
+        <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+      </div>
+
+      <!-- Comment Form -->
+      <div class="comment-form">
+        <h3>Add Your Comment</h3>
+        <p>
+          Your email address will not be published. Required fields are marked *
+        </p>
+
+        <form>
+          <div class="formy-row">
+            <input type="text" placeholder="Soldier*" />
+            <input type="email" placeholder="soldier@info.com*" />
+            <input type="number" placeholder="+586 9587 3458*" />
+          </div>
+          <textarea placeholder="Write Your Comment*"></textarea>
+          <button type="submit" class="post-btn">Post Comment</button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer" aria-label="Site footer">
+      <div class="footer-inner">
+        <!-- Left: Subscribe -->
+        <section class="subscribe" aria-label="Subscribe section">
+          <h3>SUBSCRIBE NOW</h3>
+          <p>
+            Tempus ligula vivamus ultricies pulvinar risus. Some services you
+            can learn school uses contemn non est quis. Puisque in massa
+          </p>
+          <div class="fields" role="form">
+            <!-- <span style="font-size:14px; color:#9b8a4a;">Your Email</span> -->
+            <input
+              type="email"
+              placeholder="Your Email"
+              aria-label="Email address"
+            />
+            <!-- decorative pencil icon (could be an inline SVG) -->
+            <span aria-hidden="true" style="font-size: 16px; color: #b0893f"
+              >✎</span
+            >
+          </div>
+          <div class="hint">We respect your privacy. Unsubscribe anytime.</div>
+        </section>
+
+        <!-- Center: Card/logo -->
+        <div class="center-card" aria-label="Center logo card">
+          <div class="cad">
+            <div class="logo">
+              <a href="index.html">
+                <img src="Images/logo.png" alt="Logo" />
+              </a>
+            </div>
+            <p>
+              Consequat phar etra in the auris odio spendisse non est quis
+              Puisque in massa justo raesent.
+            </p>
+            <div class="my-social-icons">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Blog & Events -->
+        <section class="events" aria-label="Blog and events">
+          <div
+            style="
+              font-weight: 700;
+              font-size: 20px;
+              color: #fff;
+              text-align: center;
+            "
+          >
+            BLOG & EVENTS
+          </div>
+
+          <article class="event-item" aria-label="Event item 1">
+            <div class="event-item-header event-meta">
+              <span><i class="fa-regular fa-clock"></i>Jan 25,2025</span>
+              <span><i class="fa-solid fa-user"></i>Admin</span>
+              <span><i class="fa-regular fa-message"></i>1.7k</span>
+            </div>
+            <div class="event-title">
+              <a href="blog.html">Soldier for rideshare in the way</a>
+            </div>
+          </article>
+
+          <article class="event-item" aria-label="Event item 2">
+            <div class="event-meta">
+              <span><i class="fa-regular fa-clock"></i>April 25,2025</span>
+              <span><i class="fa-solid fa-user"></i>Admin</span>
+              <span><i class="fa-regular fa-message"></i>1.7k</span>
+            </div>
+            <div class="event-title" style="min-height: 1.6em">
+              <a href="blog.html">Young boy smiles as he holds flags</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </footer>
+    <div class="footer-bottom" aria-label="Copyright">
       ©Copyright - All Right Reserved. Designed with ❤️ by
-      <span style="color:#f2d08a; margin-left:6px;">Valentine</span>
+      <span style="color: #f2d08a; margin-left: 6px">Valentine</span>
     </div>
-
-
-
 
     <!-- Back to Top Button -->
     <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
 
-
-
     <script src="blog.js"></script>
-
-</body>
+  </body>
 </html>
